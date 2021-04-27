@@ -1,0 +1,19 @@
+﻿@model List< ChefSahar.UI.WebUI.Components.Tags.Components.GetTagRecipe.GetTagRecipeViewModel>
+
+
+    <div class="widget">
+        <div class="section-heading heading-dark">
+            <h3 class="item-heading">TAGS</h3>
+        </div>
+        <div class="widget-tag">
+            <ul>
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a href="#">@item.Name</a>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </div>

@@ -1,0 +1,10 @@
+﻿@{ 
+    ViewBag.Title = "Index";
+    ViewBag.HeaderPos = "fixed";
+}
+
+
+@await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.LastRecipe.LastRecipeViewComponent))
+@await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.Trending.TrendingViewComponent))
+@await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.EditorChoice.EditorChoiceViewComponent)) 
+@await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.Popular.PopularViewComponent)) 

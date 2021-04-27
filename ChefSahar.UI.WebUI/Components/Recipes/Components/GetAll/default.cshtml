@@ -1,0 +1,38 @@
+﻿@model List<ChefSahar.UI.WebUI.Components.Recipes.Components.Get.GetRecipeViewModel>
+
+
+@foreach (var item in Model)
+{
+    <div class="col-md-6 col-12">
+        <div class="product-box-layout1">
+            <figure class="item-figure">
+                <a href="@Url.Action("RecipeDetail","Home",new { Id = item.ID })">
+                    <img src=@Url.Content(item.ImageUrl) alt="Product">
+                </a>
+            </figure>
+            <div class="item-content">
+                <span class="sub-title">CHICKEN</span>
+                <h3 class="item-title">
+                    <a href="@Url.Action("RecipeDetail","Home",new { Id = item.ID })">
+                      @item.Title
+                    </a>
+                </h3>
+                <ul class="item-rating">
+                    <li class="star-fill"><i class="fas fa-star"></i></li>
+                    <li class="star-fill"><i class="fas fa-star"></i></li>
+                    <li class="star-fill"><i class="fas fa-star"></i></li>
+                    <li class="star-fill"><i class="fas fa-star"></i></li>
+                    <li class="star-empty"><i class="fas fa-star"></i></li>
+                    <li><span>9<span> / 10</span></span> </li>
+                </ul>
+                <p>
+                   @item.Description?.Substring(0,item.Description?.Length > 50 ? 50 : item.Description.Length)
+                </p>
+                <ul class="entry-meta">
+                    <li><a href="#"><i class="fas fa-clock"></i>@item.CookTime Mins</a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i><span>02</span> Likes</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+}

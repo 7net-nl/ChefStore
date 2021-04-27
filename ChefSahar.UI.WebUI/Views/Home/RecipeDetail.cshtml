@@ -1,0 +1,30 @@
+﻿@model long 
+
+@{
+    ViewBag.Title = "Recipe Detail";
+    ViewBag.HeaderPos = "static";
+}
+
+<partial name="_HeaderSub" />
+
+<!-- Single Recipe With Sidebar Area Start Here -->
+<section class="single-recipe-wrap-layout1 padding-top-74 padding-bottom-50">
+    <div class="container">
+        <div class="row gutters-60">
+            <div class="col-lg-8">
+             @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.Get.GetViewComponent),new {Id = Model })
+            </div>
+            <div class="col-lg-4 sidebar-widget-area sidebar-break-md">
+               
+                
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Categories.Components.GetAllSideBar.GetAllSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.RandomSideBar.RandomSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.LastSideBar.LastSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.FeatureArticle.FeatureArticleViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Tags.Components.GetTagRecipe.GetTagRecipeViewComponent),new {ProductId = Model })
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Single Recipe With Sidebar Area End Here -->

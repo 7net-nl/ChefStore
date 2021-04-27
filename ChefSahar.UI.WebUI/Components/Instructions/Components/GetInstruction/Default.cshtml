@@ -1,0 +1,30 @@
+﻿@model List<ChefSahar.UI.WebUI.Components.Instructions.Components.GetInstruction.GetInstructionViewModel>
+
+    <div class="direction-wrap-layout1">
+        <div class="section-heading heading-dark">
+            <h2 class="item-heading">INSTRUCTIONS</h2>
+        </div>
+
+        @foreach (var item in Model)
+        {
+            <div class="direction-box-layout1">
+                <div class="item-figure">
+                    <img class="img-instruct" src="@Url.Content(item.ImageUrl)" alt="DIRECTIONS">
+                </div>
+                <div class="item-content">
+                    <div class="serial-number">@item.Step</div>
+                    <p>
+                        @item.Description
+                    </p>
+                </div>
+            </div>
+        }
+
+        <div class="direction-box-layout1">
+            <div class="item-figure">
+                <img class="rounded my-5 shadow-lg bg-white" src="@Url.Content(ViewBag?.ImageRecipe)" alt="DIRECTIONS">
+            </div>
+
+
+        </div>
+    </div>

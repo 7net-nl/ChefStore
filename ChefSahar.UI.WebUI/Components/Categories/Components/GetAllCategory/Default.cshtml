@@ -1,0 +1,28 @@
+﻿@model List<ChefSahar.UI.WebUI.Components.Categories.Components.GetCategory.GetCategoryViewModel>
+
+<!-- Category Area Start Here -->
+<section class="category-page-wrap padding-top-80 padding-bottom-50">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="category-box-layout1">
+                        <figure class="item-figure">
+                            <a href="single-recipe1.html">
+                                <img src="~/img/product/product29.jpg"
+                                     alt="Product">
+                            </a>
+                        </figure>
+                        <div class="item-content">
+                            <h3 class="item-title"><a href="single-recipe1.html">@item.Name</a></h3>
+                            <span class="sub-title"> 14 Recipes</span>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!-- Category Area End Here -->

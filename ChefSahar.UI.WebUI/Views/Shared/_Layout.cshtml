@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html lang="">
+
+<head>
+   <partial name="_Head" />
+</head>
+
+<body>
+   
+    <partial name="_ScrollUp" />
+    <!-- ScrollUp End Here -->
+    <div id="wrapper" class="wrapper">
+        <partial name="_Header" />
+        @RenderBody()
+        <partial name="_Footer" />
+       
+
+    </div>
+
+    <partial name="_Script" />
+
+    @RenderSection("Scripts",false)
+
+
+</body>
+
+</html>

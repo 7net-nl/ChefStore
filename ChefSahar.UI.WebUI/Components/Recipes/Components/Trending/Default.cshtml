@@ -1,0 +1,62 @@
+﻿@model List<ChefSahar.UI.WebUI.Components.Recipes.Components.Get.GetRecipeViewModel>
+
+<section class="padding-bottom-30">
+    <div class="container">
+        <div class="row gutters-60">
+            <div class="col-lg-8">
+                <div class="section-heading heading-dark">
+                    <h2 class="item-heading">TRENDING RECIPES</h2>
+                </div>
+                <div class="row">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <div class="product-box-layout1">
+                                <figure class="item-figure">
+                                    <a href="single-recipe1.html">
+                                        <img src="@item.ImageUrl"
+                                             alt="Product">
+                                    </a>
+                                </figure>
+                                <div class="item-content">
+                                    <h3 class="item-title"><a href="single-recipe1.html">Asian Chicken Noodles</a></h3>
+                                    <ul class="item-rating">
+                                        <li class="star-fill"><i class="fas fa-star"></i></li>
+                                        <li class="star-fill"><i class="fas fa-star"></i></li>
+                                        <li class="star-fill"><i class="fas fa-star"></i></li>
+                                        <li class="star-fill"><i class="fas fa-star"></i></li>
+                                        <li class="star-empty"><i class="fas fa-star"></i></li>
+                                        <li><span>9<span> / 10</span></span> </li>
+                                    </ul>
+                                    <p>
+                                        More off this less hello salamander lied porpoise much over tightly circa
+                                        outside crud mightily rigorouse.
+                                    </p>
+                                    <ul class="entry-meta">
+                                        <li><a href="#"><i class="fas fa-clock"></i>15 Mins</a></li>
+                                        <li><a href="#"><i class="fas fa-user"></i>by <span>John Martin</span></a></li>
+                                        <li><a href="#"><i class="fas fa-heart"></i><span>02</span> Likes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-4 sidebar-widget-area sidebar-break-md">
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Others.Components.AboutMe.AboutMeViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Categories.Components.GetAllSideBar.GetAllSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.LastSideBar.LastSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.RandomSideBar.RandomSideBarViewComponent))
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Trending Recipe End Here -->

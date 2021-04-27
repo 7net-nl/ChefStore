@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "About";
+    ViewBag.HeaderPos = "static";
+}
+
+<partial name="_HeaderSub" />
+<!-- Recipe With Sidebar Area Start Here -->
+<section class="all-recipes-page-wrap padding-top-80 padding-bottom-50">
+    <div class="container">
+        <div class="row gutters-60">
+            <div class="col-lg-8">
+                <div class="about-box">
+                    <div class="about-figure">
+                        <img src="~/img/about.jpg" alt="About">
+                    </div>
+                    <h2 class="about-title title-bar bar-center">Rosario Kareon</h2>
+                    <p class="item-description">
+                        More off this less hello salamander lied porpoise much over tightly circa horse taped so innocuously side crudey mightily rigorous plot life. New homes in particular are subject.All recipes created with FoodiePress have suport for Micoformats and Google Recipe View. Schema.org is a collaboration byo improve the web by creatinegaera structured data markupore off this less hello salamander lied
+                        porpoise much over tightlyapedey innocuouslylife.
+                    </p>
+                    
+                    
+                </div>
+            </div>
+            <div class="col-lg-4 sidebar-widget-area sidebar-break-md">
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.LastSideBar.LastSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.FeatureArticle.FeatureArticleViewComponent))
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Recipe With Sidebar Area End Here -->

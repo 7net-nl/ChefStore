@@ -1,0 +1,21 @@
+﻿@model List<ChefSahar.UI.WebUI.Components.Categories.Components.GetCategory.GetCategoryViewModel>
+
+<div class="widget">
+    <div class="section-heading heading-dark">
+        <h3 class="item-heading">CATEGORIES</h3>
+    </div>
+    <div class="widget-categories">
+        <ul>
+
+            @foreach (var item in Model)
+            {
+                <li>
+                    <a href="#">
+                        @item.Name
+                    </a>
+                </li>
+            }
+
+        </ul>
+    </div>
+</div>

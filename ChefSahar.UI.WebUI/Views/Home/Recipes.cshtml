@@ -1,0 +1,40 @@
+﻿@model short
+
+@{
+    ViewBag.Title = "Recipes";
+    ViewBag.HeaderPos = "static";
+}
+
+<partial name="_HeaderSub" />
+<!-- Recipe With Sidebar Area Start Here -->
+<section class="all-recipes-page-wrap padding-top-80 padding-bottom-22">
+    <div class="container">
+        <div class="row gutters-60">
+            <div class="col-lg-8">
+                <div class="adv-search-wrap">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Author Name or Recipe Search . . ." />
+                        <div class="btn-group">
+                            <div class="input-group-btn">
+                                <button type="submit" class="btn-search"><i class="flaticon-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.GetAll.GetAllViewComponent),new { Id = Model })
+                </div>
+            </div>
+            <div class="col-lg-4 sidebar-widget-area sidebar-break-md">
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Categories.Components.GetAllSideBar.GetAllSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.RandomSideBar.RandomSideBarViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.Today.TodayViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.FeatureArticle.FeatureArticleViewComponent))
+                @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Tags.Components.GetAllTagSideBar.GetAllTagSideBarViewComponent))
+            </div>
+        </div>
+    </div>
+</section>
+
+@await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.Paging.PagingViewComponent),new { CurrentPage = Model })

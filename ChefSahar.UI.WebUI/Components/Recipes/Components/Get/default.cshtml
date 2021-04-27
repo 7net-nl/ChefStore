@@ -1,0 +1,69 @@
+﻿@model ChefSahar.UI.WebUI.Components.Recipes.Components.Get.GetRecipeViewModel
+
+    <div class="single-recipe-layout1">
+        @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Categories.Components.GetCategory.GetCategoryViewComponent),new { CategoryId = Model.Category_ID })
+        <h2 class="item-title">@Model.Title</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item rounded" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        </div>
+        <div class="item-feature">
+            <ul>
+                <li>
+                    <div class="feature-wrap">
+                        <div class="media">
+                            <div class="feature-icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="media-body space-sm">
+                                <div class="feature-title">PREP TIME</div>
+                                <div class="feature-sub-title">@Model.TimePrep Mins</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-wrap">
+                        <div class="media">
+                            <div class="feature-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="media-body space-sm">
+                                <div class="feature-title">COOK TIME</div>
+                                <div class="feature-sub-title">@Model.CookTime Mins</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="feature-wrap">
+                        <div class="media">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="media-body space-sm">
+                                <div class="feature-title">SERVING</div>
+                                <div class="feature-sub-title">@Model.NumberServing People</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+        <p class="item-description">
+            @Model.Description
+        </p>
+
+        @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Ingridents.Components.GetIngrident.GetIngridentViewComponent), new {ProductId = Model.ID })
+
+        @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Instructions.Components.GetInstruction.GetInstructionViewComponent),new { ProductId = Model.ID })
+
+
+
+
+        @await Component.InvokeAsync(typeof(ChefSahar.UI.WebUI.Components.Recipes.Components.SocialMedia.SocialMediaViewComponent))
+
+        
+
+        
+    </div>

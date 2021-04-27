@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    ViewBag.HeaderPos = "static";
+}
+
+<partial name="_HeaderSub" />
+
+<!-- Contact Page Area Start Here -->
+<section class="contact-page-wrap">
+    <div class="contact-box-left">
+        <div class="container">
+            <div class="section-heading heading-dark">
+                <h3 class="item-heading-big">Our Information</h3>
+            </div>
+           
+            <div class="contact-address">
+                <ul>
+                   
+                    <li>
+                        <div class="item-icon"><i class="far fa-envelope"></i></div>
+                        fttcab@gmail.com
+                    </li>
+                    <li>
+                        <div class="item-icon"><i class="fas fa-phone"></i></div>
+                        <a href="https://t.me/GetPepper">Telegram</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="section-heading heading-dark">
+                <h3 class="item-heading-big">Send Message</h3>
+            </div>
+            <form id="contact-form" class="contact-form-box">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" placeholder="Name *" class="form-control" name="name" data-error="Name field is required"
+                               required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input type="email" placeholder="E-mail *" class="form-control" name="email" data-error="E-mail field is required"
+                               required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-12 form-group">
+                        <input type="text" placeholder="Subject *" class="form-control" name="subject"
+                               data-error="Subject field is required" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-12 form-group">
+                        <textarea placeholder="Type your text" class="textarea form-control" name="message" id="form-message"
+                                  rows="3" cols="20" data-error="Message field is required" required></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="col-12 form-group mb-0 mt-3">
+                        <button type="submit" class="item-btn">SUBMIT MESSAGE</button>
+                    </div>
+                    <div class="form-response"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="contact-box-right">
+     <img class="img-fluid" src="~/img/contact.jpg" />
+    </div>
+</section>
+<!-- Contact Page Area End Here -->
